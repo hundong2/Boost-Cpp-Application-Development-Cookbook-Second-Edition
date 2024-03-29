@@ -13,4 +13,12 @@ brew install cmake
 
 ```
 
+## execute CMAKE 
 
+```sh
+cmake -DCMAKE_BUILD_TYPE=debug .
+```
+
+## reference 
+
+- https://object-world.tistory.com/9
