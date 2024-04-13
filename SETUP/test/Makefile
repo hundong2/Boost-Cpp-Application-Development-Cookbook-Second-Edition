@@ -57,10 +57,10 @@ RM = /opt/homebrew/Cellar/cmake/3.29.0/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/test
+CMAKE_SOURCE_DIR = /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/test
+CMAKE_BINARY_DIR = /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/test/CMakeFiles /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/test//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/test/CMakeFiles 0
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(CMAKE_COMMAND) -E cmake_progress_start /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/CMakeFiles /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/test//CMakeFiles/progress.marks
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,55 +103,132 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named main
+# Convenience name for target.
+test/CMakeFiles/main.dir/rule:
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/main.dir/rule
+.PHONY : test/CMakeFiles/main.dir/rule
 
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+# Convenience name for target.
+main: test/CMakeFiles/main.dir/rule
 .PHONY : main
 
 # fast build rule for target.
 main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/main.dir/build.make test/CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+# Convenience name for target.
+test/CMakeFiles/main2.dir/rule:
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/main2.dir/rule
+.PHONY : test/CMakeFiles/main2.dir/rule
+
+# Convenience name for target.
+main2: test/CMakeFiles/main2.dir/rule
+.PHONY : main2
+
+# fast build rule for target.
+main2/fast:
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/main2.dir/build.make test/CMakeFiles/main2.dir/build
+.PHONY : main2/fast
+
+# Convenience name for target.
+test/CMakeFiles/decltype.dir/rule:
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test/CMakeFiles/decltype.dir/rule
+.PHONY : test/CMakeFiles/decltype.dir/rule
+
+# Convenience name for target.
+decltype: test/CMakeFiles/decltype.dir/rule
+.PHONY : decltype
+
+# fast build rule for target.
+decltype/fast:
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/decltype.dir/build.make test/CMakeFiles/decltype.dir/build
+.PHONY : decltype/fast
+
+src/decltype.o: src/decltype.cpp.o
+.PHONY : src/decltype.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/decltype.cpp.o:
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/decltype.dir/build.make test/CMakeFiles/decltype.dir/src/decltype.cpp.o
+.PHONY : src/decltype.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/decltype.i: src/decltype.cpp.i
+.PHONY : src/decltype.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/decltype.cpp.i:
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/decltype.dir/build.make test/CMakeFiles/decltype.dir/src/decltype.cpp.i
+.PHONY : src/decltype.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/decltype.s: src/decltype.cpp.s
+.PHONY : src/decltype.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/decltype.cpp.s:
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/decltype.dir/build.make test/CMakeFiles/decltype.dir/src/decltype.cpp.s
+.PHONY : src/decltype.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/main.dir/build.make test/CMakeFiles/main.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/main.dir/build.make test/CMakeFiles/main.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/main.dir/build.make test/CMakeFiles/main.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/main2.o: src/main2.cpp.o
+.PHONY : src/main2.o
+
+# target to build an object file
+src/main2.cpp.o:
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/main2.dir/build.make test/CMakeFiles/main2.dir/src/main2.cpp.o
+.PHONY : src/main2.cpp.o
+
+src/main2.i: src/main2.cpp.i
+.PHONY : src/main2.i
+
+# target to preprocess a source file
+src/main2.cpp.i:
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/main2.dir/build.make test/CMakeFiles/main2.dir/src/main2.cpp.i
+.PHONY : src/main2.cpp.i
+
+src/main2.s: src/main2.cpp.s
+.PHONY : src/main2.s
+
+# target to generate assembly for a file
+src/main2.cpp.s:
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f test/CMakeFiles/main2.dir/build.make test/CMakeFiles/main2.dir/src/main2.cpp.s
+.PHONY : src/main2.cpp.s
 
 # Help Target
 help:
@@ -161,10 +238,18 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... decltype"
 	@echo "... main"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... main2"
+	@echo "... src/decltype.o"
+	@echo "... src/decltype.i"
+	@echo "... src/decltype.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/main2.o"
+	@echo "... src/main2.i"
+	@echo "... src/main2.s"
 .PHONY : help
 
 
@@ -176,6 +261,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -64,6 +64,8 @@ CMAKE_BINARY_DIR = /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-De
 
 # The main recursive "all" target.
 all: CMakeFiles/main.dir/all
+all: CMakeFiles/main2.dir/all
+all: CMakeFiles/decltype.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +74,8 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/main.dir/clean
+clean: CMakeFiles/main2.dir/clean
+clean: CMakeFiles/decltype.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -81,7 +85,7 @@ clean: CMakeFiles/main.dir/clean
 CMakeFiles/main.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/test/CMakeFiles --progress-num=1,2 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/test/CMakeFiles --progress-num=3,4 "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -99,6 +103,58 @@ main: CMakeFiles/main.dir/rule
 CMakeFiles/main.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
 .PHONY : CMakeFiles/main.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/main2.dir
+
+# All Build rule for target.
+CMakeFiles/main2.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main2.dir/build.make CMakeFiles/main2.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main2.dir/build.make CMakeFiles/main2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/test/CMakeFiles --progress-num=5,6 "Built target main2"
+.PHONY : CMakeFiles/main2.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/main2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/test/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/main2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/test/CMakeFiles 0
+.PHONY : CMakeFiles/main2.dir/rule
+
+# Convenience name for target.
+main2: CMakeFiles/main2.dir/rule
+.PHONY : main2
+
+# clean rule for target.
+CMakeFiles/main2.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main2.dir/build.make CMakeFiles/main2.dir/clean
+.PHONY : CMakeFiles/main2.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/decltype.dir
+
+# All Build rule for target.
+CMakeFiles/decltype.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/decltype.dir/build.make CMakeFiles/decltype.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/decltype.dir/build.make CMakeFiles/decltype.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/test/CMakeFiles --progress-num=1,2 "Built target decltype"
+.PHONY : CMakeFiles/decltype.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/decltype.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/test/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/decltype.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/test/CMakeFiles 0
+.PHONY : CMakeFiles/decltype.dir/rule
+
+# Convenience name for target.
+decltype: CMakeFiles/decltype.dir/rule
+.PHONY : decltype
+
+# clean rule for target.
+CMakeFiles/decltype.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/decltype.dir/build.make CMakeFiles/decltype.dir/clean
+.PHONY : CMakeFiles/decltype.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

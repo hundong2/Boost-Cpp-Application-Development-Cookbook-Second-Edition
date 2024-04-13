@@ -57,10 +57,10 @@ RM = /opt/homebrew/Cellar/cmake/3.29.0/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/boost_test
+CMAKE_SOURCE_DIR = /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/boost_test
+CMAKE_BINARY_DIR = /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-De
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	/opt/homebrew/Cellar/cmake/3.28.3/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/opt/homebrew/Cellar/cmake/3.29.0/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/boost_test/CMakeFiles /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/boost_test//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/boost_test/CMakeFiles 0
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(CMAKE_COMMAND) -E cmake_progress_start /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/CMakeFiles /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/boost_test//CMakeFiles/progress.marks
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 boost_test/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 boost_test/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,30 +103,31 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 boost_test/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 boost_test/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named boost_test
+# Convenience name for target.
+boost_test/CMakeFiles/boost_test.dir/rule:
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 boost_test/CMakeFiles/boost_test.dir/rule
+.PHONY : boost_test/CMakeFiles/boost_test.dir/rule
 
-# Build rule for target.
-boost_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 boost_test
+# Convenience name for target.
+boost_test: boost_test/CMakeFiles/boost_test.dir/rule
 .PHONY : boost_test
 
 # fast build rule for target.
 boost_test/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/boost_test.dir/build.make CMakeFiles/boost_test.dir/build
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f boost_test/CMakeFiles/boost_test.dir/build.make boost_test/CMakeFiles/boost_test.dir/build
 .PHONY : boost_test/fast
 
 main.o: main.cpp.o
@@ -134,7 +135,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/boost_test.dir/build.make CMakeFiles/boost_test.dir/main.cpp.o
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f boost_test/CMakeFiles/boost_test.dir/build.make boost_test/CMakeFiles/boost_test.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -142,7 +143,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/boost_test.dir/build.make CMakeFiles/boost_test.dir/main.cpp.i
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f boost_test/CMakeFiles/boost_test.dir/build.make boost_test/CMakeFiles/boost_test.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -150,7 +151,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/boost_test.dir/build.make CMakeFiles/boost_test.dir/main.cpp.s
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(MAKE) $(MAKESILENT) -f boost_test/CMakeFiles/boost_test.dir/build.make boost_test/CMakeFiles/boost_test.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -176,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /Users/donghun2/workspace/modern-cpp/Boost-Cpp-Application-Development-Cookbook-Second-Edition/SETUP && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
